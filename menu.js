@@ -190,15 +190,17 @@ console.log(filteredFood)
     Return the filtered array from the entire function
 */
 
-//CODE HERE isues
+//CODE HERE
 
 const filterByProperty = (property,type,number)=>{
-let result = []
-if (type = 'above' && property>number) {
-    return true
-} else if (type = `below`&&property<number){
-    return true
-}
+const results = foodArr.filter(item => {
+    if(type === `above`){
+        return item[property] > number
+    } else if (type === `below`){
+        return item[property] < number
+    }
+})
+return results
 }
 
 
@@ -210,6 +212,4 @@ if (type = 'above' && property>number) {
 */
 
 //CODE HERE
-const filteredByProperty = foodArr.filter(filterByProperty(`price`,`below`,10))
-
-console.log(filteredByProperty)
+console.log(filterByProperty(`price`, `above`,10))
