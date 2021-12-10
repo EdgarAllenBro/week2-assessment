@@ -33,11 +33,12 @@ const cart = [
     }
 ]
 
-//CODE HERE
+// //CODE HERE
+// const total = cart.reduce((obj,cv)=>{
+// return obj.price + cv.price
+// })
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
-
+// console.log(total)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -54,7 +55,11 @@ const cart = [
 */
 
 //CODE HERE
-
+const calcFinalPrice = (total,coupon,tax)=>{
+let finalTotal = total+(total*tax)-coupon
+return finalTotal
+}
+console.log(calcFinalPrice(112,10,.06))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,6 +84,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    a resturant would need to know a customers name so they can assign an order to it, input as a string since is wont contain numbers,
+    their order so we know the items they want, input as a string since it wont contain numbers
+    time ordered entered as a number so it can be easily tracked and compared to other times.
+    
 
 */
 
@@ -88,3 +97,10 @@ const cart = [
 */
 
 //CODE HERE
+class Customer {
+    constructor(name, order, orderTime){
+        this.name = name
+        this.order = order
+        this.orderTime = orderTime
+    }
+}
