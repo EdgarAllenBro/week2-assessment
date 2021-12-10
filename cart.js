@@ -33,10 +33,8 @@ const cart = [
     }
 ]
 
-// //CODE HERE Issues
-const total = cart.reduce((obj,cv)=>{
-return obj.price + cv.price
-})
+// //CODE HERE
+const total = cart.reduce((obj,cv)=>obj + cv.price, 0)
 
 // console.log(total)
 //////////////////PROBLEM 2////////////////////
