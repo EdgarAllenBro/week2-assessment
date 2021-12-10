@@ -33,10 +33,10 @@ const cart = [
     }
 ]
 
-// //CODE HERE
-// const total = cart.reduce((obj,cv)=>{
-// return obj.price + cv.price
-// })
+// //CODE HERE Issues
+const total = cart.reduce((obj,cv)=>{
+return obj.price + cv.price
+})
 
 // console.log(total)
 //////////////////PROBLEM 2////////////////////
@@ -84,7 +84,7 @@ console.log(calcFinalPrice(112,10,.06))
 
 /*
     TEXT ANSWER HERE
-    a resturant would need to know a customers name so they can assign an order to it, input as a string since is wont contain numbers,
+    Answer : A resturant would need to know a customers name so they can assign an order to it, input as a string since is wont contain numbers,
     their order so we know the items they want, input as a string since it wont contain numbers
     time ordered entered as a number so it can be easily tracked and compared to other times.
     

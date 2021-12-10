@@ -126,7 +126,7 @@ const deals = [
 
 //CODE HERE
 
-deals[0].title = `10% off!`
+deals[0].title = deal[0].title.replace('15%','10%')
 console.log(deals)
 
 /*
@@ -143,5 +143,5 @@ console.log(deals)
 */
 
 //CODE HERE
-deals[1].desc = `This deal lasts until the end of April!`
+deals[1].desc = deals[1].desc.replace('march','april').trim()
 console.log(deals)

@@ -190,7 +190,7 @@ console.log(filteredFood)
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+//CODE HERE isues
 
 const filterByProperty = (property,type,number)=>{
 let result = []
