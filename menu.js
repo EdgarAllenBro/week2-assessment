@@ -60,6 +60,7 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -70,7 +71,8 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-
+let price = pizza.price
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -80,6 +82,8 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
+let cata = pizza.catagory
+console.log(cata)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -95,7 +99,35 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
+const foodArr = [
+{name:`vegan pizza?`,
+price:15,
+catagory:`why do we have this`,
+popularity:2,
+rating:1,
+tags:[`vegan`,`bad`]},
 
+{name:`pretzel bites`,
+    price:5,
+    catagory:`Fan Favs`,
+    popularity:8,
+    rating:9,
+    tags:[`finger foods`,`yummy`]},
+
+{name:`sandwich`,
+    price:7,
+    catagory:`Fan Favs`,
+    popularity:7,
+    rating:8,
+    tags:[`meat`, `yummy`,`classic`]},
+{name:`the classic`,
+    price:10,
+    catagory:`Fan Favs`,
+    popularity:9,
+    rating:10,
+    tags:[`meat`,`yummy`,`classic`]}
+
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -112,7 +144,10 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((food)=>{
+    if (food.tags.includes(`classic`)){return food}
+})
+console.log(filteredFood)
 
 
 
@@ -157,6 +192,15 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
+const filterByProperty = (property,type,number)=>{
+let result = []
+if (type = 'above' && property>number) {
+    return true
+} else if (type = `below`&&property<number){
+    return true
+}
+}
+
 
 /*
     Invoke the `filterByProperty` function passing
@@ -166,3 +210,6 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
+const filteredByProperty = foodArr.filter(filterByProperty(`price`,`below`,10))
+
+console.log(filteredByProperty)
